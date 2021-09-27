@@ -1,5 +1,20 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+    let letter = [];
+    let rword = "";
+  
+    for (let i = 0; i < word.length; i++) {
+      letter.push(word[i]);
+    }
+  
+    for (let i = 0; i < word.length; i++) {
+      console.log((rword += letter.pop()));
+    }
+  
+    if (rword === word) {
+      return true;
+    } else {
+      return false;
+    }
 }
 
 /* 
@@ -23,3 +38,6 @@ if (require.main === module) {
 }
 
 module.exports = isPalindrome;
+
+
+
